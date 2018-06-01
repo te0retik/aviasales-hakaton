@@ -24,6 +24,6 @@ class AirlineCompany(models.Model):
         verbose_name_plural = 'Airline companies'
 
     def __str__(self):
-        return f'AirlineCompany({self.name}, {self.code},' \
-               f' {self.carryon_max_x}x{self.carryon_max_y}x{self.carryon_max_z}),' \
-               f' {self.baggage_3dimensions}'
+        return 'AirlineCompany(%s, %s, %sx%sx%s, %s)' % (
+            self.name, self.code, self.carryon_max_x, self.carryon_max_y,
+            self.carryon_max_z, self.baggage_3dimensions)
