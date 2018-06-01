@@ -1,0 +1,10 @@
+Django==1.11.13
+django-filer==1.3.2
+django-modeltranslation==0.12.2
+django-mptt==0.8.7
+django-polymorphic==2.0.2
+djangorestframework==3.8.2
+easy-thumbnails==2.5
+Pillow==5.1.0
+pytz==2018.4
+Unidecode==0.4.21
