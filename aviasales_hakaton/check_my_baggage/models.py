@@ -53,5 +53,5 @@ class AirlineCompany(models.Model):
         else:
             link_cropped = self.baggage_allowance_link
         return '<a href="%s">%s</a>' % (self.baggage_allowance_link, link_cropped)
-    baggage_allowance_link_href.short_description = 'icon'
+    baggage_allowance_link_href.short_description = 'Baggage allowance link'
     baggage_allowance_link_href.allow_tags = True
