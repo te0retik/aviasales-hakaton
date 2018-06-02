@@ -7,7 +7,7 @@ from check_my_baggage.models import AirlineCompany
 
 
 class AirlineCompanyAdmin(TranslationAdmin):
-    list_display = ('code', 'name', 'baggage_allowance_link', 'carryon_max_x',
+    list_display = ('code', 'name', 'icon_img', 'baggage_allowance_link_href', 'carryon_max_x',
                     'carryon_max_y', 'carryon_max_z', 'baggage_3dimensions')
     list_display_links = ('code',)
 
