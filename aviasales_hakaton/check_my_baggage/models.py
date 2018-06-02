@@ -11,14 +11,14 @@ class AirlineCompany(models.Model):
     code = models.CharField(verbose_name='IATA 2 chars code', max_length=2, db_index=True)
     icon = FilerImageField(verbose_name='Logo icon 50x50', related_name='icon', blank=True, null=True)
     logo = FilerImageField(verbose_name='Logo image [large]', related_name='logo', blank=True, null=True)
-    description = models.TextField(verbose_name='Decription')
+    description = models.TextField(verbose_name='Decription', blank=True, null=True)
     baggage_allowance_link = models.URLField(verbose_name='Baggage allowance link')
 
-    carryon_max_x = models.FloatField(verbose_name='Carryon max length')
-    carryon_max_y = models.FloatField(verbose_name='Carryon max width')
-    carryon_max_z = models.FloatField(verbose_name='Carryon max height')
+    carryon_max_x = models.FloatField(verbose_name='Carryon max length', default=55.0)
+    carryon_max_y = models.FloatField(verbose_name='Carryon max width', default=40.0)
+    carryon_max_z = models.FloatField(verbose_name='Carryon max height', default=20.0)
 
-    baggage_3dimensions = models.FloatField(verbose_name='Max value for the sum of 3 dimensions')
+    baggage_3dimensions = models.FloatField(verbose_name='Max value for the sum of 3 dimensions', default=203.0)
 
     class Meta:
         ordering = ('name', 'code')
