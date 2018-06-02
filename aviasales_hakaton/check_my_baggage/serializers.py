@@ -18,7 +18,7 @@ class AirlineCompaniesSerializer(BaseAirlineCompaniesSerializer):
 class AirlineCompanySerializer(BaseAirlineCompaniesSerializer):
     class Meta:
         model = AirlineCompany
-        fields = ('code', 'name', 'icon',
+        fields = ('code', 'name', 'image',
                   'baggage_allowance_link',
                   'carryon_max_x', 'carryon_max_y', 'carryon_max_z',
                   'baggage_3dimensions')
