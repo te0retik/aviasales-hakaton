@@ -15,10 +15,11 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& mkdir ${INSTANCE_HOME}
 
 WORKDIR ${INSTANCE_HOME}
-COPY ./aviasales_hakaton ${APP_SRC}
+COPY ./aviasales_hakaton/requirements.txt ${APP_SRC}/requirements.txt
 RUN pip3 install --no-cache-dir -r ${APP_SRC}/requirements.txt \
 	&& pip3 install PyZMQ\<17.0 tornado\<5.0
 
+COPY ./aviasales_hakaton ${APP_SRC}
 COPY ./docker/circus-web.ini /etc/circus/web.ini
 COPY ./docker/nginx-default-site.conf /etc/nginx/sites-available/default
 COPY ./docker/gunicorn.py .
