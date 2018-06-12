@@ -14,6 +14,8 @@ from django.conf.urls.i18n import i18n_patterns
 from aviasales_hakaton import settings
 
 
+# TODO all other intresting things
+
 urlpatterns = [
     url(r'^/?$',  RedirectView.as_view(permanent=False, url=reverse_lazy('airlines'))),
     url(r'^admin/', admin.site.urls),
